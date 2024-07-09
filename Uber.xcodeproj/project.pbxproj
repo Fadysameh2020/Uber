@@ -14,6 +14,9 @@
 		0012537E2C3BD6360084186C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012537C2C3BD6360084186C /* HomeViewController.swift */; };
 		0012537F2C3BD6360084186C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0012537D2C3BD6360084186C /* HomeViewController.xib */; };
 		001253822C3BD7EA0084186C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001253812C3BD7EA0084186C /* LocationManager.swift */; };
+		001253852C3BD9820084186C /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 001253842C3BD9820084186C /* FloatingPanel */; };
+		0012538A2C3BDB120084186C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001253882C3BDB120084186C /* SearchViewController.swift */; };
+		0012538B2C3BDB120084186C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001253892C3BDB120084186C /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,8 @@
 		0012537C2C3BD6360084186C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0012537D2C3BD6360084186C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		001253812C3BD7EA0084186C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		001253882C3BDB120084186C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		001253892C3BDB120084186C /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001253852C3BD9820084186C /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +110,7 @@
 		001253792C3BD6070084186C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				001253862C3BDAE50084186C /* SearchModule */,
 				0012537A2C3BD6110084186C /* HomeModule */,
 			);
 			path = Modules;
@@ -134,6 +141,23 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		001253862C3BDAE50084186C /* SearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				001253872C3BDB010084186C /* View */,
+			);
+			path = SearchModule;
+			sourceTree = "<group>";
+		};
+		001253872C3BDB010084186C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				001253882C3BDB120084186C /* SearchViewController.swift */,
+				001253892C3BDB120084186C /* SearchViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +174,9 @@
 			dependencies = (
 			);
 			name = Uber;
+			packageProductDependencies = (
+				001253842C3BD9820084186C /* FloatingPanel */,
+			);
 			productName = Uber;
 			productReference = 0012535E2C3BD5B30084186C /* Uber.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +205,9 @@
 				Base,
 			);
 			mainGroup = 001253552C3BD5B30084186C;
+			packageReferences = (
+				001253832C3BD9820084186C /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+			);
 			productRefGroup = 0012535F2C3BD5B30084186C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +224,7 @@
 			files = (
 				0012536B2C3BD5B60084186C /* Assets.xcassets in Resources */,
 				0012536E2C3BD5B60084186C /* Base in Resources */,
+				0012538B2C3BDB120084186C /* SearchViewController.xib in Resources */,
 				0012537F2C3BD6360084186C /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0012538A2C3BDB120084186C /* SearchViewController.swift in Sources */,
 				001253822C3BD7EA0084186C /* LocationManager.swift in Sources */,
 				001253622C3BD5B30084186C /* AppDelegate.swift in Sources */,
 				001253642C3BD5B30084186C /* SceneDelegate.swift in Sources */,
@@ -419,6 +451,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		001253832C3BD9820084186C /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scenee/FloatingPanel.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		001253842C3BD9820084186C /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 001253832C3BD9820084186C /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 001253562C3BD5B30084186C /* Project object */;
 }
